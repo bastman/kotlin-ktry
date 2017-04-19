@@ -11,14 +11,17 @@ fun main(args: Array<String>) {
     }.then {
         println("FINALLY")
     }
+    println("n: $n")
 
     val d1: Double? = Try {
         200.0
     }.getOrThrow()
+    println("d1: $d1")
 
     val d2: Double? = Try {
         200.0
     }.getOrElse { null }
+    println("d2: $d2")
 
 
     for (i in 0..100) {
