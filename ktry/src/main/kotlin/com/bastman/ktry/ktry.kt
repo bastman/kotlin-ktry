@@ -44,6 +44,11 @@ inline fun <T> Try<T>.getOrElse(block: (Throwable) -> T): T = when (this) {
 }
 
 
+fun <T> Try<T>.orElse(default: Try<T>): Try<T> = when (this) {
+    is Success -> this
+    else -> default
+}
+
 inline fun <T> Try<T>.failure(block: (Throwable) -> Unit): Try<T> = when (this) {
     is Failure -> {
         block(exception)
