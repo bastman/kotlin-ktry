@@ -1,0 +1,4 @@
+rootProject.name = 'kotlin-ktry'
+include 'ktry'
+include 'examples'
+

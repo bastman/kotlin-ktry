@@ -1,0 +1,26 @@
+group 'com.bastman.kotlin-functional'
+version '1.0-SNAPSHOT'
+
+buildscript {
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+
+
+subprojects {
+    apply plugin: 'kotlin'
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    }
+}
+
